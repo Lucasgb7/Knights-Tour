@@ -7,4 +7,4 @@ The knight's tour problem is the mathematical problem of finding a knight's tour
 
 From Wikipedia, the free encyclopedia
 
-![Legal Moves for a Knight on Square 12, and the Corresponding Graph]{https://runestone.academy/runestone/books/published/pythonds/_images/knightmoves.png}
+![Legal Moves for a Knight on Square 12, and the Corresponding Graph](knightmoves.png)
