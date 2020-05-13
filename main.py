@@ -20,7 +20,6 @@ def moveCavalo(tabuleiro, P, tamanho_tabuleiro):
                               and not tabuleiro[(x, y)])
     return movimentosPossiveis
 
-
 def acessaPosicao(tabuleiro, P, tamanho_tabuleiro):
     acessados = []  # posições ja acessadas
     tab = copy.deepcopy(tabuleiro)  # copia os exatos indices e chaves do tabuleiro para um tab auxiliar
@@ -29,7 +28,6 @@ def acessaPosicao(tabuleiro, P, tamanho_tabuleiro):
         acessados.append((len(moveCavalo(tab, pos, tamanho_tabuleiro)), pos))   # coloca nos acessados a proxima posicao sendo a quantidade de casas a ser percorrida
         tab[pos] = 0
     return acessados    # retorna as posicoes acessadas
-
 
 def knights_tour(inicio, tamanho_tabuleiro, debug=False):
     tabuleiro = {(x, y): 0 for x in range(tamanho_tabuleiro) for y in range(tamanho_tabuleiro)}
@@ -45,8 +43,6 @@ def knights_tour(inicio, tamanho_tabuleiro, debug=False):
 
     return tabuleiro
 
-
-
 if __name__ == '__main__':
 
     tabuleiro = knights_tour(turtle.textinput("Posição inicial","Exemplo(linhaXcoluna): a1, b5, h8"), 8)
@@ -55,11 +51,10 @@ if __name__ == '__main__':
     '''
     Gerando interface gráfica
     '''
-
+    t.drawCreditos("Knight’s Tour Algorithm", -165, 300, 24)
     t.drawCreditos("Desenvolvido por:", -280, -320, 16)
     t.drawCreditos("Lucas J. Cunha", -105, -320, 16)
     t.drawCreditos("Luiz Zimmermann", -105, -350, 16)
-    t.drawCreditos("Knight’s Tour Algorithm", -165, 300, 24)
 
     t.tabuleiro(-280, -280, 70, 8, "white", "#996633")
     for key,value in tabuleiro.items():
